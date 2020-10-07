@@ -5,7 +5,7 @@
   .module('app1',[])
   .controller('controlador', function($scope){
     
-    $scope.nome = 'Eder'
+    $scope.nome = ''
     $scope.contador = 10
 
 
