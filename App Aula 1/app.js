@@ -7,6 +7,7 @@
     
     $scope.nome = ''
     $scope.contador = 10
+   
 
 
   })
