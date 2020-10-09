@@ -4,18 +4,26 @@
   
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Aula 1</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+  <link rel="stylesheet" href="https://bootswatch.com/4/slate/bootstrap.css">
   <script src ="app.js"></script> 
-</head>
+  </head>
+  <div class="alert alert-dismissible alert-danger" align="center">
+        <strong  >Atenção! todas alterações feitas serão perdidas!!!</strong>
+  </div>
+  <div class="mx-auto mt-5 jumbotron" style="width: 800px;" align="center">
+    <h1> Primeiro programa da Maratona Stefanini</h1>
 <body ng-controller="controlador">
-    <h1>Olá {{nome}}</h1>
+    <h1 align="center">Olá {{nome}}</h1>
   <input type="text" ng-model="nome" placeholder="Escreva seu nome aqui">
       <br>
       <br>
-      <h1>Contador</h1>
-      <h1>{{contador}}</h1>
-      <button ng-click="contador =contador + 1;">Adicionar 1</button>
-      <button ng-click="contador =contador - 1;">Subtrair 1</button>
+      <h1 >Contador</h1>
+      <h1 >{{contador+5}}</h1>
+      <button type="button" class="btn btn-primary" ng-click="contador =contador + 1;">+1</button>
+      <button type="button" class="btn btn-primary" ng-click="contador =contador - 1;">-1</button>
+      </body>
+    </div>
 </body>
 </html>
