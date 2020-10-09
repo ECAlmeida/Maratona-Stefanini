@@ -6,25 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tarefas</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="lista-tarefas.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://bootswatch.com/4/slate/bootstrap.css">
+
     <link rel="stylesheet" href="lista-tarefas.css">
 
 </head>
 
 <body>
-    <div class="mx-auto mt-5 jumbotron" style="width: 400px;">
+    <div class="mx-auto mt-5 jumbotron" style="width: 400px;" align="center">
         <h2 class="font-weight-bold">Lista de Tarefas a fazer</h2>
+        <hr class="my-4">
         <div ng-controller="listaTarefasController as vm">
             <div class="mb-2">
                 Restam {{vm.restam()}} de {{vm.tarefas.length}}
-                [ <a href="" ng-click="vm.arquivar()">arquivar</a> ]
+                
+                <a href="" class="material-icons" ng-click="vm.arquivar()">delete</a>
             </div>
             <ul class="unstyled">
                 <li ng-repeat="trf in vm.tarefas">
                     <label class="checkbox">
+                        
                         <input type="checkbox" ng-model="trf.feito">
                         <span class="feito-{{trf.feito}}">{{trf.text}}</span>
                     </label>

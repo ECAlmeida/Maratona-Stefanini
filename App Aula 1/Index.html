@@ -16,7 +16,9 @@
     <h1> Primeiro programa da Maratona Stefanini</h1>
 <body ng-controller="controlador">
     <h1 align="center">Olá {{nome}}</h1>
-  <input type="text" data-ls-module="charCounter" ng-model="nome" ng-trim="false" maxlength="150"  placeholder="Escreva seu nome aqui"required>
+  <input type="text" ng-model="nome"  placeholder="Escreva seu nome aqui">
+  <span class="form-text text-danger">{{restantes(nome)}} caracteres digitados
+        </span>
       <br>
       <br>
       <h1 >Contador</h1>
