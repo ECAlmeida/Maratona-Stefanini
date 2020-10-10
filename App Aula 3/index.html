@@ -58,7 +58,7 @@
 
     <!-- ### ESPAÇO ALERTAS ### -->
     <div id="alertas" class="container" ng-show="listaMensagens.length">
-        <div ng-repeat="msg in listaMensagens" class="alert alert-{{msg.tipo}}" role="alert">
+        <div ng-repeat="msg in listaMensagens track by msg.tipo" class="alert alert-{{msg.tipo}}" role="alert" >
             {{msg.text}}
             <button type="button" class="close" aria-label="Close"
                     ng-click="listaMensagens.splice($index, 1)">

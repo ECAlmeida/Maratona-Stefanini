@@ -8,14 +8,23 @@
   angular.module('listaTarefasApp')
       .controller('ListaTarefasController', listaTarefasController);
 
-  listaTarefasController.$inject = [];
+  listaTarefasController.$inject = ['$rootScope'];
 
-  function listaTarefasController() {
+  function listaTarefasController($rootScope) {
       var vm = this;
       /* ***************    INIT VARIÁVEIS    *********************************** */
       vm.logado = false;
       vm.validar = false;
       vm.register = false;
+      $rootScope.listaMensagens = [
+        {text: 'Mensagem aqui', tipo: 'danger'},
+        {text: 'Mensagem aqui', tipo: 'info'},
+        {text: 'Mensagem aqui', tipo: 'success'},
+        {text: 'Mensagem aqui', tipo: 'warning'},
+
+      ];
+
+    
 
       /* ***************    FUNÇÕES EXECUTADAS NA VIEW (HMTL)    **************** */
 
